@@ -1,0 +1,8 @@
+prefix=/home/abdelrahman/Arduino/imu task/Testing workspace/devel
+
+Name: geographic_lib
+Description: Description of geographic_lib
+Version: 1.8.0
+Cflags: -I/home/abdelrahman/Arduino/imu task/Testing workspace/devel/include
+Libs: -L${prefix}/lib -lgeographic_lib
+Requires: 

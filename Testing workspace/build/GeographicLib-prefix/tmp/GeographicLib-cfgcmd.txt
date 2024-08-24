@@ -1,0 +1,1 @@
+cmd='cd;/home/abdelrahman/Arduino/imu task/Testing workspace/build/GeographicLib-prefix/src/GeographicLib;&&;cmake;-D;CMAKE_INSTALL_PREFIX=/home/abdelrahman/Arduino/imu task/Testing workspace/devel;-D;GEOGRAPHICLIB_DATA=/home/abdelrahman/Arduino/imu task/Testing workspace/devel/share/geographic_lib/data;.'

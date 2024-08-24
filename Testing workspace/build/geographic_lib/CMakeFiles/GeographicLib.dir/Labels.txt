@@ -1,0 +1,13 @@
+# Target labels
+ GeographicLib
+# Source files and their labels
+/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/CMakeFiles/GeographicLib
+/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/CMakeFiles/GeographicLib.rule
+/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/CMakeFiles/GeographicLib-complete.rule
+/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-install.rule
+/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-mkdir.rule
+/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-download.rule
+/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-update.rule
+/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-patch.rule
+/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-configure.rule
+/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-build.rule

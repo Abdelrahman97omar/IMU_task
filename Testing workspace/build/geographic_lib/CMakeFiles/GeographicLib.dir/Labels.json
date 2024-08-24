@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/CMakeFiles/GeographicLib"
+		},
+		{
+			"file" : "/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/CMakeFiles/GeographicLib.rule"
+		},
+		{
+			"file" : "/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/CMakeFiles/GeographicLib-complete.rule"
+		},
+		{
+			"file" : "/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-install.rule"
+		},
+		{
+			"file" : "/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-mkdir.rule"
+		},
+		{
+			"file" : "/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-download.rule"
+		},
+		{
+			"file" : "/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-update.rule"
+		},
+		{
+			"file" : "/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-patch.rule"
+		},
+		{
+			"file" : "/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-configure.rule"
+		},
+		{
+			"file" : "/home/abdelrahman/Arduino/imu task/Testing workspace/build/geographic_lib/GeographicLib-prefix/src/GeographicLib-stamp/GeographicLib-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"GeographicLib"
+		],
+		"name" : "GeographicLib"
+	}
+}

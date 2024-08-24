@@ -1,0 +1,12 @@
+Actuall_angle code:
+        it's a node that subscribes to "slamware_ros_sdk_server_node/odom" topic from the robot
+        and save the angles readings into a yaml file
+
+actuall_base_acc code:
+        This code subscribes to "/wheel_speeds" topic to receive the wheel speeds in m/s
+        and save the time and velocities differences between each two publishes to 
+        calculate acceleration
+
+Actuall_rotation_speed code:
+        This code subscribes to "/wheel_speeds" and calculate the rotational velocity of the
+        robot

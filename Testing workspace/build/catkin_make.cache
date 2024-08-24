@@ -1,0 +1,2 @@
+catkin_simple:geographic_info/geodesy:geographic_info/geographic_info:geographic_info/geographic_msgs:geographic_lib:robot_localization:roslint:test:unique_identifier/unique_id:unique_identifier/unique_identifier:unique_identifier/uuid_msgs
+-DCATKIN_DEVEL_PREFIX=/home/abdelrahman/Arduino/imu task/Testing workspace/devel -DCMAKE_INSTALL_PREFIX=/home/abdelrahman/Arduino/imu task/Testing workspace/install -G Unix Makefiles

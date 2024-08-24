@@ -1,0 +1,17 @@
+.IX Title "gravity 8"
+.TH geographiclib-get-gravity 8 "" "GeographicLib" "GeographicLib"
+.SH "NAME"
+geographiclib-get-gravity \-\- a GeographicLib administrative tool
+.SH "DESCRIPTION"
+.IX Header "DESCRIPTION"
+\&\fBgeographiclib-get-gravity\fR downloads and installs the gravity datasets used by
+GeographicLib, <http://geographiclib.sf.net>.  For documentation, supply
+the \fB-h\fR option:
+.PP
+.Vb 2
+\&   geographiclib-get-gravity -h
+.Ve
+.PP
+By default, the datasets are installed in
+\&\f(CW\*(C`/home/abdelrahman/Arduino/imu task/Testing workspace/devel/share/geographic_lib/data/gravity\*(C'\fR and
+the script requires write access to this directory.

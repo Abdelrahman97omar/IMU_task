@@ -1,0 +1,17 @@
+.IX Title "geoids 8"
+.TH geographiclib-get-geoids 8 "" "GeographicLib" "GeographicLib"
+.SH "NAME"
+geographiclib-get-geoids \-\- a GeographicLib administrative tool
+.SH "DESCRIPTION"
+.IX Header "DESCRIPTION"
+\&\fBgeographiclib-get-geoids\fR downloads and installs the geoids datasets used by
+GeographicLib, <http://geographiclib.sf.net>.  For documentation, supply
+the \fB-h\fR option:
+.PP
+.Vb 2
+\&   geographiclib-get-geoids -h
+.Ve
+.PP
+By default, the datasets are installed in
+\&\f(CW\*(C`/home/abdelrahman/Arduino/imu task/Testing workspace/devel/share/geographic_lib/data/geoids\*(C'\fR and
+the script requires write access to this directory.

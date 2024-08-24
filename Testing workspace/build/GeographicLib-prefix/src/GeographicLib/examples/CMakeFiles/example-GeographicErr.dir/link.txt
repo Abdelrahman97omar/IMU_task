@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wextra -std=c++11 -O3 -DNDEBUG  -rdynamic CMakeFiles/example-GeographicErr.dir/example-GeographicErr.cpp.o  -o example-GeographicErr  -Wl,-rpath,"/home/abdelrahman/Arduino/imu task/Testing workspace/build/GeographicLib-prefix/src/GeographicLib/src" ../src/libGeographic.so.14.0.1 
