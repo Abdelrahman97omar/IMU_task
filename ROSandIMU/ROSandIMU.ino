@@ -14,11 +14,33 @@ sh2_SensorValue_t sensorValue;
 bool accReceived=false;
 bool gyroReceived=false;
 bool rotReceived=false;
+float i_start=0.0;
+float j_start=0.0;
+float k_start=0.0;
+float w_start=0.0;
 
 sensor_msgs::Imu sensor_data; 
 ros::NodeHandle nh;
 ros::Publisher pub("sensor_data", &sensor_data);
+void initial_angle()
+{ 
+  bool done=false;
 
+  while (!done)
+  {
+    bno08x.getSensorEvent(&sensorValue);
+    if (sensorValue.sensorId==SH2_ROTATION_VECTOR)
+    {
+        i_start=sensorValue.un.rotationVector.i;
+        j_start=sensorValue.un.rotationVector.j;
+        k_start=sensorValue.un.rotationVector.k;
+        w_start=1-sensorValue.un.rotationVector.real;
+        done=true;
+    }
+
+  }
+  
+}
 void setup(void) {
     Wire.begin();
     Wire.setClock(400000); 
@@ -26,7 +48,8 @@ void setup(void) {
     Serial.begin(115200);
     nh.initNode();
     nh.advertise(pub);
-    setReports();   
+    setReports(); 
+    initial_angle();  
     delay(100);
 }
 
@@ -50,18 +73,10 @@ void loop() {
       accReceived=true;
         break;
        case SH2_ROTATION_VECTOR:
-        sensor_data.orientation.x=sensorValue.un.rotationVector.i;
-        sensor_data.orientation.y=sensorValue.un.rotationVector.j;
-        sensor_data.orientation.z=sensorValue.un.rotationVector.k;
-        sensor_data.orientation.w=sensorValue.un.rotationVector.real;
-        // sensor_data.orientation_covariance[0]=i_start;
-        // sensor_data.orientation_covariance[1]=j_start;
-        // sensor_data.orientation_covariance[2]=k_start;
-        // sensor_data.orientation_covariance[3]=w_start;
-        // sensor_data.orientation_covariance[4]=
-        // sensor_data.orientation_covariance[5]=
-        // sensor_data.orientation_covariance[6]=
-        // sensor_data.orientation_covariance[7]=
+        sensor_data.orientation.x=sensorValue.un.rotationVector.i-i_start;
+        sensor_data.orientation.y=sensorValue.un.rotationVector.j-j_start;
+        sensor_data.orientation.z=sensorValue.un.rotationVector.k-k_start;
+        sensor_data.orientation.w=sensorValue.un.rotationVector.real+w_start;
         sensor_data.orientation_covariance[8]=0.0000000787;
         rotReceived=true;
         break;
