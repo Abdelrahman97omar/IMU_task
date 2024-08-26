@@ -43,8 +43,8 @@ try:
         current_odom.pose.pose.orientation.y=j
         current_odom.pose.pose.orientation.z=k
         current_odom.pose.pose.orientation.w=w
-        current_odom.pose.covariance[0]=0.2 #for distance x-axis
-        current_odom.pose.covariance[7]=0.2 #for distance y-axis
+        current_odom.pose.covariance[0]=0.02 #for distance x-axis
+        current_odom.pose.covariance[7]=0.02 #for distance y-axis
         current_odom.pose.covariance[35]=0.00002 #for yaw
         current_odom.header.stamp = rospy.Time.now()  
         current_odom.header.frame_id='odom'
