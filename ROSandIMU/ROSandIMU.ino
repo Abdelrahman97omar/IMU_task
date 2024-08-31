@@ -81,7 +81,7 @@ void loop() {
       rotReceived=false;
       gyroReceived=false;
       accReceived=false;
-      sensor_data.header.frame_id="base_link";
+      sensor_data.header.frame_id="imu_link";
       sensor_data.header.stamp=nh.now();
       pub.publish(&sensor_data);
       nh.spinOnce();

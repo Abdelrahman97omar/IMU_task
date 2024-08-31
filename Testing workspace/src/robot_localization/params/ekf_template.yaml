@@ -31,7 +31,7 @@ print_diagnostics: true
 # Debug settings. Not for the faint of heart. Outputs a ludicrous amount of information to the file specified by
 # debug_out_file. I hope you like matrices! Please note that setting this to true will have strongly deleterious
 # effects on the performance of the node. Defaults to false if unspecified.
-debug: false
+debug: true
 
 # Defaults to "robot_localization_debug.txt" if unspecified. Please specify the full path.
 debug_out_file: /path/to/debug/file.txt
@@ -96,7 +96,7 @@ odom0_config: [true,  true,  false,
                false, false, false]
 # If you have high-frequency data or are running with a low frequency parameter value, then you may want to increase
 # the size of the subscription queue so that more measurements are fused.
-odom0_queue_size: 10
+odom0_queue_size: 2
 
 # [ADVANCED] Large messages in ROS can exhibit strange behavior when they arrive at a high frequency. This is a result
 # of Nagle's algorithm. This option tells the ROS subscriber to use the tcpNoDelay option, which disables Nagle's
@@ -111,7 +111,7 @@ odom0_nodelay: false
 # data is converted to velocity data by differentiating the absolute pose measurements. These velocities are then
 # integrated as usual. NOTE: this only applies to sensors that provide pose measurements; setting differential to true
 # for twist measurements has no effect.
-odom0_differential: false
+odom0_differential: true
 
 # [ADVANCED] When the node starts, if this parameter is true, then the first measurement is treated as a "zero point"
 # for all future measurements. While you can achieve the same effect with the differential paremeter, the key
@@ -173,17 +173,18 @@ imu0: /sensor_data
 #hena fl imu haseb el yaw we el yaw_velocity el etneen true 3shan el imu by7seb kol
 #yaw mn kol wa7da mnhom be tare2a mo5tlfa (rotvector->yaw , gyro->yaw_velocity)
 imu0_config: [false, false, false,
-              false,  false,  false,
+              false,  false,  true,
               false, false, false,
               false,  false,  true,
               true,  false,  false]
+
 imu0_nodelay: false
 imu0_differential: false
 imu0_relative: false #check!!!!!!!!!
 imu0_queue_size: 10
-# imu0_pose_rejection_threshold: 0.8                 # Note the difference in parameter names
-# imu0_twist_rejection_threshold: 0.8                #
-# imu0_linear_acceleration_rejection_threshold: 0.8  #
+imu0_pose_rejection_threshold: 0.8                 # Note the difference in parameter names
+imu0_twist_rejection_threshold: 0.8                #
+imu0_linear_acceleration_rejection_threshold: 0.8  #
 
 # [ADVANCED] Some IMUs automatically remove acceleration due to gravity, and others don't. If yours doesn't, please set
 # this to true, and *make sure* your data conforms to REP-103, specifically, that the data is in ENU frame.
